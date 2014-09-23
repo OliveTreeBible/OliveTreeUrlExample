@@ -9,6 +9,7 @@ This is an example project demonstrating how to use the `olivetree://bible/` URL
 ```objective-c
 NSString *reference @"2 Corinthians 3:18"; //example reference
 NSString *urlBase = @"olivetree://bible/";
+// The final URL will be olivetree://bible/2%20Corinthians%203.18
 
 //Replace spaces with percent escape
 reference = [reference stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
