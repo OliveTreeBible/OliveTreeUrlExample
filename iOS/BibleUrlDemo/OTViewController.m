@@ -55,7 +55,7 @@
     else if (self.viewType == BibleViewTypeBook)
         self.navigationItem.title = [self bookNameAtIndex:[self.dataPath indexAtPosition:0]];
     else
-        self.navigationItem.title = [NSString stringWithFormat:@"%@ %u", [self bookNameAtIndex:[self.dataPath indexAtPosition:0]], [self.dataPath indexAtPosition:1] + 1];
+        self.navigationItem.title = [NSString stringWithFormat:@"%@ %i", [self bookNameAtIndex:[self.dataPath indexAtPosition:0]], (int)[self.dataPath indexAtPosition:1] + 1];
 }
 
 -(void)loadView
@@ -104,7 +104,7 @@
         
         //Generate a normal scripture reference of the form <book_name> <chapter>:<verse>
         //Chapter and verse are zero-indexed, so add 1
-        NSString *scriptureRef = [NSString stringWithFormat:@"%@ %i:%i", book, chapterIndex + 1, indexPath.row + 1];
+        NSString *scriptureRef = [NSString stringWithFormat:@"%@ %i:%i", book, (int)chapterIndex + 1, (int)indexPath.row + 1];
         
         //Replace space with the HTML escape (%20)
         scriptureRef = [scriptureRef stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
@@ -171,14 +171,14 @@
     else if (self.viewType == BibleViewTypeBook)
     {
         NSInteger bookIndex = [self.dataPath indexAtPosition:0];
-        cell.textLabel.text = [NSString stringWithFormat:@"%@ %i", [self bookNameAtIndex:bookIndex], indexPath.row + 1];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ %i", [self bookNameAtIndex:bookIndex], (int)indexPath.row + 1];
     }
     else //chapter
     {
         NSInteger bookIndex = [self.dataPath indexAtPosition:0];
         NSString *book = [self bookNameAtIndex:bookIndex];
         NSInteger chapterIndex = [self.dataPath indexAtPosition:1];
-        cell.textLabel.text = [NSString stringWithFormat:@"%@ %i:%i", book, chapterIndex + 1, indexPath.row + 1];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ %i:%i", book, (int)chapterIndex + 1, (int)indexPath.row + 1];
     }
     
     return cell;
