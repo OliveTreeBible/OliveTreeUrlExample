@@ -22,6 +22,7 @@
 		F71AF995182F2CED009F80BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F71AF993182F2CED009F80BB /* InfoPlist.strings */; };
 		F71AF997182F2CED009F80BB /* BibleUrlDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F71AF996182F2CED009F80BB /* BibleUrlDemoTests.m */; };
 		F71AF9A1182F2D07009F80BB /* BibleJson.txt in Resources */ = {isa = PBXBuildFile; fileRef = F71AF9A0182F2D07009F80BB /* BibleJson.txt */; };
+		F7487F991DAEFBA100BE74DF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7487F981DAEFBA100BE74DF /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		F71AF994182F2CED009F80BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F71AF996182F2CED009F80BB /* BibleUrlDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BibleUrlDemoTests.m; sourceTree = "<group>"; };
 		F71AF9A0182F2D07009F80BB /* BibleJson.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BibleJson.txt; sourceTree = "<group>"; };
+		F7487F981DAEFBA100BE74DF /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				F71AF981182F2CED009F80BB /* OTViewController.m */,
 				F71AF983182F2CED009F80BB /* Images.xcassets */,
 				F71AF972182F2CED009F80BB /* Supporting Files */,
+				F7487F981DAEFBA100BE74DF /* Launch Screen.storyboard */,
 			);
 			path = BibleUrlDemo;
 			sourceTree = "<group>";
@@ -200,7 +203,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = OT;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Olive Tree Bible Software";
 				TargetAttributes = {
 					F71AF988182F2CED009F80BB = {
@@ -235,6 +238,7 @@
 				F71AF984182F2CED009F80BB /* Images.xcassets in Resources */,
 				F71AF976182F2CED009F80BB /* InfoPlist.strings in Resources */,
 				F71AF97F182F2CED009F80BB /* Main.storyboard in Resources */,
+				F7487F991DAEFBA100BE74DF /* Launch Screen.storyboard in Resources */,
 				F71AF9A1182F2D07009F80BB /* BibleJson.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +314,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -320,13 +323,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -349,7 +358,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -359,13 +367,18 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -382,10 +395,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BibleUrlDemo/BibleUrlDemo-Prefix.pch";
 				INFOPLIST_FILE = "BibleUrlDemo/BibleUrlDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "OT.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -395,10 +410,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BibleUrlDemo/BibleUrlDemo-Prefix.pch";
 				INFOPLIST_FILE = "BibleUrlDemo/BibleUrlDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "OT.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -407,7 +424,6 @@
 		F71AF99E182F2CED009F80BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BibleUrlDemo.app/BibleUrlDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -421,6 +437,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "BibleUrlDemoTests/BibleUrlDemoTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "OT.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -430,7 +447,6 @@
 		F71AF99F182F2CED009F80BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BibleUrlDemo.app/BibleUrlDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -440,6 +456,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BibleUrlDemo/BibleUrlDemo-Prefix.pch";
 				INFOPLIST_FILE = "BibleUrlDemoTests/BibleUrlDemoTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "OT.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -465,6 +482,7 @@
 				F71AF99C182F2CED009F80BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F71AF99D182F2CED009F80BB /* Build configuration list for PBXNativeTarget "BibleUrlDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +491,7 @@
 				F71AF99F182F2CED009F80BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
